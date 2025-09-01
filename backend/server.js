@@ -11,8 +11,30 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 // Middleware
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:8080', 
+    'https://apiplaygrounds.netlify.app',
+    /\.netlify\.app$/,
+    /\.onrender\.com$/
+  ],
+  credentials: true
+}));
 app.use(express.json());
+
+// Root endpoint for debugging
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'API Playground Backend is running!',
+    endpoints: {
+      health: '/health',
+      profiles: '/profiles',
+      search: '/search/projects?q=query'
+    },
+    version: '1.0.0'
+  });
+});
 
 // Health check endpoint
 app.get('/health', (req, res) => {
