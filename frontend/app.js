@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = 'https://api-playground-gp1a.onrender.com';
+const API_BASE_URL = 'https://api-playground-backend-production.up.railway.app';
 
 // DOM Elements
 const profilesContainer = document.getElementById('profilesContainer');
