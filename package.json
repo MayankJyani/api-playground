@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "API Playground - Backend Assessment",
   "scripts": {
+    "build": "cd backend && npm install",
     "start": "cd backend && npm start",
-    "install-backend": "cd backend && npm install",
     "dev": "cd backend && npm run dev"
   },
   "repository": {
