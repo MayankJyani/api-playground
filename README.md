@@ -53,7 +53,7 @@ cd frontend
 ✅ GET /health endpoint returning 200
 ✅ Minimal frontend interface
 ✅ Complete documentation
-⏳ Hosted application with working URLs
+✅ Hosted application with working URLs
 
 ## Local Development
 
@@ -127,9 +127,10 @@ The backend includes configuration files for easy deployment:
 
 ## Live URLs
 
-- **Repository**: [This Git repository]
-- **Backend API**: [Deploy using provided config files]
-- **Frontend**: [Deploy frontend folder to static hosting]
+- **Repository**: https://github.com/MayankJyani/api-playground
+- **Backend API**: https://api-playground-backend-production.up.railway.app
+- **Frontend**: https://apiplaygrounds.netlify.app
+- **API Health Check**: https://api-playground-backend-production.up.railway.app/health
 
 ## Technology Stack
 
