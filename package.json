@@ -1,0 +1,16 @@
+{
+  "name": "api-playground",
+  "version": "1.0.0",
+  "description": "API Playground - Backend Assessment",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "install-backend": "cd backend && npm install",
+    "dev": "cd backend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MayankJyani/api-playground.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -7,6 +7,7 @@ const { db, initializeDatabase } = require('./database');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === 'production';
 
 // Middleware
 app.use(helmet());
