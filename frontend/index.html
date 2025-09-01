@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Playground - Profile Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 API Playground</h1>
+            <p>Candidate Profile Management System</p>
+        </header>
+
+        <main>
+            <!-- Search Section -->
+            <section class="search-section">
+                <h2>Search & Filter</h2>
+                <div class="search-controls">
+                    <div class="input-group">
+                        <label for="skillSearch">Filter by Skill:</label>
+                        <input type="text" id="skillSearch" placeholder="e.g., Python, JavaScript">
+                        <button onclick="searchBySkill()">Search</button>
+                    </div>
+                    <div class="input-group">
+                        <label for="projectSearch">Search Projects:</label>
+                        <input type="text" id="projectSearch" placeholder="e.g., web, machine learning">
+                        <button onclick="searchProjects()">Search</button>
+                    </div>
+                    <button onclick="loadAllProfiles()" class="btn-secondary">Show All Profiles</button>
+                </div>
+            </section>
+
+            <!-- Profiles Display Section -->
+            <section class="profiles-section">
+                <h2>Profiles</h2>
+                <div id="profilesContainer" class="profiles-container">
+                    <!-- Profiles will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Projects Display Section -->
+            <section class="projects-section">
+                <h2>Projects</h2>
+                <div id="projectsContainer" class="projects-container">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Add Profile Form -->
+            <section class="add-profile-section">
+                <h2>Add New Profile</h2>
+                <form id="addProfileForm" class="profile-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="education">Education</label>
+                        <input type="text" id="education" placeholder="e.g., Computer Science, MIT">
+                    </div>
+                    <div class="input-group">
+                        <label for="skills">Skills (comma-separated)</label>
+                        <input type="text" id="skills" placeholder="e.g., JavaScript, Python, React">
+                    </div>
+                    <div class="input-group">
+                        <label for="projectTitle">Project Title</label>
+                        <input type="text" id="projectTitle" placeholder="My Awesome Project">
+                    </div>
+                    <div class="input-group">
+                        <label for="projectDescription">Project Description</label>
+                        <textarea id="projectDescription" placeholder="Brief description of the project"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="projectLinks">Project Links (comma-separated URLs)</label>
+                        <input type="text" id="projectLinks" placeholder="https://github.com/user/repo, https://demo.com">
+                    </div>
+                    <button type="submit">Add Profile</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Status Messages -->
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
